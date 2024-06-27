@@ -1,6 +1,9 @@
 .timeline-wrapper {
   position: relative;
   display: flex;
+  overflow-x: auto; /* Allow horizontal scrolling */
+  overflow-y: hidden; /* Prevent vertical scrolling */
+  white-space: nowrap; /* Prevent wrapping of lines */
 }
 
 .timeline-title {
@@ -15,6 +18,7 @@
 }
 
 .lines-container {
+  position: relative;
   display: flex;
   overflow-x: scroll;
   flex-direction: row;
