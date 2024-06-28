@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/physics-timeline-app/static/css/main.580cc3f8.css",
+    "main.js": "/physics-timeline-app/static/js/main.949c6610.js",
+    "static/js/453.1feb8a99.chunk.js": "/physics-timeline-app/static/js/453.1feb8a99.chunk.js",
+    "static/media/fractal-4901049.jpg": "/physics-timeline-app/static/media/fractal-4901049.dcba4d938bb270a9279a.jpg",
+    "index.html": "/physics-timeline-app/index.html",
+    "main.580cc3f8.css.map": "/physics-timeline-app/static/css/main.580cc3f8.css.map",
+    "main.949c6610.js.map": "/physics-timeline-app/static/js/main.949c6610.js.map",
+    "453.1feb8a99.chunk.js.map": "/physics-timeline-app/static/js/453.1feb8a99.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.580cc3f8.css",
+    "static/js/main.949c6610.js"
+  ]
+}
