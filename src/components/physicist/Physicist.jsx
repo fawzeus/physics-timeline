@@ -8,7 +8,11 @@ const Physicist = ({ name, year, url, text, alt, x, y, onClick }) => {
       style={{ left: x, top: y }}
       onClick={onClick}
     >
-      <img className="physicist-image" src={url} alt={""}></img>
+      <img
+        className="physicist-image"
+        src={process.env.PUBLIC_URL + url}
+        alt={""}
+      ></img>
       <div className="text-wrapper">{name}</div>
     </div>
   );

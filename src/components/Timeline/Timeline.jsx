@@ -3,19 +3,16 @@ import VerticalLine from "../VerticalLine/VerticalLine";
 import "./Timeline.css";
 import Physicist from "../physicist/Physicist";
 import Note from "../Note/Note";
-
 const Timeline = () => {
   const totalLines = 15; //number of lines
   const [physicists, setPhysicists] = useState([]);
   const [physicist, setPhysicist] = useState(null);
   useEffect(() => {
-    fetch("/physicistsData.json")
+    fetch(`${process.env.PUBLIC_URL}/physicistsData.json`)
       .then((response) => response.json())
       .then((data) => {
-        const physicistsArray = Object.entries(data).map(([id, details]) => ({
-          id,
-          ...details,
-        }));
+        console.log("Fetched data:", data); // Log the fetched data
+        const physicistsArray = Object.values(data);
         setPhysicists(physicistsArray);
       })
       .catch((error) =>
