@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+.note-wrapper {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  position: absolute;
+  width: 100%;
+  height: 100%; /* Full height of the parent */
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Allow clicks to pass through the wrapper */
+  z-index: 1000;
+  transition: opacity 0.01s ease-in-out; /* Fade-in/out transition */
+}
+
+.note-container {
+  display: flex;
+  position: relative;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  width: 500px; /* Adjust width as needed */
+  min-height: 200px; /* Minimum height for the container */
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 19px;
+  padding: 20px; /* Increased padding for better readability */
+  box-shadow: 0px 0px 10000px rgba(0, 0, 0, 0.5);
+  z-index: 1001; /* Ensures the popup is above other elements */
+  pointer-events: auto; /* Allow clicks within the note container */
+  transition: opacity 0.01s ease-in-out; /* Fade-in/out transition */
+}
+
+.note-container.open {
+  opacity: 1; /* Show container when open */
+  transform: scale(1); /* Scale up to full size */
+}
+
+.note-container img {
+  width: 100px; /* Adjust image size as needed */
+  border-radius: 50%; /* Rounded image */
+  margin-bottom: 10px; /* Space between image and text */
+}
+
+.texts-wrapper {
+  text-align: center; /* Center text */
+}
+
+.name {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-weight: 1000;
+}
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.close-button {
+  background-color: white;
+  border: none;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.close-button:hover {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.summary {
+  margin-bottom: 15px; /* Adjust spacing */
+}
