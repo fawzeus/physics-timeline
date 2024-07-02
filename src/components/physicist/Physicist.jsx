@@ -1,7 +1,13 @@
 import "./Physicist.css";
 
-const Physicist = ({ name, year, url, text, alt, x, y, onClick }) => {
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+const Physicist = ({ name, year, url, alt, onClick }) => {
   console.log(url);
+  const y = getRandomInt(10) * 50 + 50;
+  const x = (year + 500) * 5;
   return (
     <div
       className="physicist-container"
@@ -10,8 +16,8 @@ const Physicist = ({ name, year, url, text, alt, x, y, onClick }) => {
     >
       <img
         className="physicist-image"
-        src={process.env.PUBLIC_URL + url}
-        alt={""}
+        src={process.env.PUBLIC_URL + "/" + url}
+        alt={alt}
       ></img>
       <div className="text-wrapper">{name}</div>
     </div>
