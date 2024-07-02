@@ -19,7 +19,7 @@ const Physicist = ({ name, year, url, alt, onClick }) => {
         src={process.env.PUBLIC_URL + "/" + url}
         alt={alt}
       ></img>
-      <div className="text-wrapper">{name}</div>
+      <div className="text-wrapper">{"HHHHHHHHHHhHHHHHHHHHHHHHHHHHH"}</div>
     </div>
   );
 };
