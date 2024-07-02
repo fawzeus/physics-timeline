@@ -7,7 +7,9 @@ function getRandomInt(max) {
 const Physicist = ({ name, year, url, alt, onClick }) => {
   console.log(url);
   const y = getRandomInt(10) * 50 + 50;
-  const x = (year + 500) * 5;
+  //const x = 65 + 130;
+  const x = year * 13 + 6500;
+  console.log(name);
   return (
     <div
       className="physicist-container"
@@ -19,7 +21,7 @@ const Physicist = ({ name, year, url, alt, onClick }) => {
         src={process.env.PUBLIC_URL + "/" + url}
         alt={alt}
       ></img>
-      <div className="text-wrapper">{"HHHHHHHHHHhHHHHHHHHHHHHHHHHHH"}</div>
+      <div className="text-wrapper">{name}</div>
     </div>
   );
 };

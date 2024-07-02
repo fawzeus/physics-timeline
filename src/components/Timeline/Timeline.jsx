@@ -30,6 +30,7 @@ const Timeline = () => {
         {physicists.map((physicist, index) => (
           <Physicist
             key={index}
+            name={physicist.name}
             url={physicist.url}
             alt={physicist.alt}
             year={physicist.birth_year}
