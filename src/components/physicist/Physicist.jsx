@@ -6,24 +6,26 @@ function getRandomInt(max) {
 
 const Physicist = ({ name, year, url, alt, onClick }) => {
   console.log(url);
-  const y = getRandomInt(10) * 50 + 50;
+  const y = getRandomInt(15) * 50 + 50;
   //const x = 65 + 130;
   const x = year * 13 + 6500;
   console.log(name);
-  return (
-    <div
-      className="physicist-container"
-      style={{ left: x, top: y }}
-      onClick={onClick}
-    >
-      <img
-        className="physicist-image"
-        src={process.env.PUBLIC_URL + "/" + url}
-        alt={alt}
-      ></img>
-      <div className="text-wrapper">{name}</div>
-    </div>
-  );
+  if (year == null) return <></>;
+  else
+    return (
+      <div
+        className="physicist-container"
+        style={{ left: x, top: y }}
+        onClick={onClick}
+      >
+        <img
+          className="physicist-image"
+          src={process.env.PUBLIC_URL + "/" + url}
+          alt={alt}
+        ></img>
+        <div className="text-wrapper">{name}</div>
+      </div>
+    );
 };
 
 export default Physicist;

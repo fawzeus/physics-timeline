@@ -23,7 +23,10 @@ const Note = ({ physicist, onClick }) => {
         <button className="close-button" onClick={onClick}>
           X
         </button>
-        <img src={process.env.PUBLIC_URL + physicist.url} alt=""></img>
+        <img
+          src={process.env.PUBLIC_URL + "/" + physicist.url}
+          alt={physicist.alt}
+        ></img>
         <div className="texts-wrapper">
           <div className="name">{physicist.name}</div>
           <div className="summary">{physicist.text}</div>
